@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /* border: 1px solid blueviolet; */
+}
+:root{
+    --main-color : #202020;
+    --element-color : #303030;
+}
+
+body{
+    background-color: var(--main-color);
+    overflow: hidden;
+
+}
+.container{
+    position: relative;
+    width: calc(100% - 2rem);
+    height: 100%;
+    margin: 1rem;
+    background-color: var(--main-color);
+}
+.menu{
+    width: 20vw;
+    height: 20vh;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: var(--element-color);
+}
+.playlist{
+    margin-top: 1vh;
+    width: 20vw;
+    height: 75vh;
+    border-radius: 15px;
+    background-color: var(--element-color);
+}
+.main{
+    position: absolute;
+    width: calc(100% - 20vw);
+    height: 100%;
+    top: 0;
+    left: 20.5vw;
+    border-radius: 15px;
+    overflow-y: scroll;
+    background-color: var(--element-color);
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    background-color: #252525;
+}
+.navbar-menu{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    padding: 1vw;
+}
+.navbar-menu input{
+    margin-left: 9rem;
+    padding: 1.2rem;
+    border-radius: 30px;
+    width: 20vw;
+    height: 5vh;
+    background-color: rgba(96, 96, 96, 0.5);
+}
+.navbar-menu button{
+    color: black;
+    margin-left: 1.2rem;
+    height: 2rem;
+    aspect-ratio: 2/1;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.artists-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin-bottom: 150px;
+    gap: 2rem;
+}
+.artists-container .artist-card{
+    width: 12rem;
+    background-color: #202020;
+    border-radius: 20px;
+    padding: 10px 5px;
+    text-align: center;
+}
+.artists-container .artist-card img{
+    border-radius: 20px;
+    width: 10rem;
+    aspect-ratio: 1/1;
+}
+.artists-container h2{
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+.artists-container p{
+    color: #c1c1c1;
+    margin-top: 15px;
+    font-size: 0.7rem;
+}
+
+.playlist{
+    padding: 1rem;
+}
+
+.playlist img{
+    width: 40px;
+}
+
+.playlist p{
+    font-size: 12px;
+    font-weight: 50;
+}
+
+.playlist-item{
+    padding-bottom: 80px;
+    /* opacity: 0; */
+}
+
+.playlist-list{
+    display: flex;
+    margin-top: 50px;
+}
+
+.content{
+    height: auto;
+    padding: 2rem;
+}
+.playlist > div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.playlist > div:hover{
+    background-color: rgba(96, 96, 96, 0.5);
+}
+
+.playlist-title{
+    padding-left: 30px;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to bottom, #199c33d6, #25020200);
+}
+
+.playlist-title > div{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    line-height: 40px;
+}
+
+
+.thumbnail-container{
+    margin-left: 30px;
+}
+
+.thumbnail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.thumbnail:hover{
+    background-color: rgba(96, 96, 96, 0.5);
+    cursor: pointer;
+}
+
+.thumbnail img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 300px;
+    margin-left: 40px;
+}
+
+.button-home{
+    position: absolute;
+    width: 3.2rem;
+    height: 1.5rem;
+    left: 4.5vw;
+    top: 10.5vh;
+}
+.button-search{
+    position: absolute;
+    width: 3.6rem;
+    height: 1.5rem;
+    left: 4.5vw;
+    top: 14.5vh;
+}
+.button-home:hover, .button-search:hover{
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+.custom-icon{
+    position: absolute;
+    cursor: pointer;
+}
+.home-icon{
+    left: 1.5vw;
+    font-size: 1.5rem;
+    top: 9.5vh;
+}
+.search-icon{
+    font-size: 1.3rem;
+    left: 1.5vw;
+    top: 14vh;
+}
+.arrow-back{
+    padding: 1rem;
+    margin-left: 1vw;
+    font-size: 2rem;
+}
+.arrow-next{
+    padding: 1rem;
+    margin-left: 4.5vw;
+    font-size: 2rem;
+}
+.profile{
+    position: absolute;
+    left: 72vw;
+    top: 2vh;
+    font-size: 2rem;
+}
+.spotlight {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+}
+
+.spotlight-item {
+    display: flex;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    flex-basis: calc(33.3333% - 1rem);
+    margin-right: 1rem;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: rgba(96, 96, 96, 0.5);
+}
+.spotlight-item img{
+    border-radius: 5px;
+}
+.spotlight-item:hover{
+    background-color: rgba(96, 96, 96, 0.8);
+    cursor: pointer;
+}
+.artis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+.wave{
+    color: lightgreen;
+    font-size: 2.25rem;
+    left: 21vw;
+    top: 23.5vh;
+}
+.musik-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 3vh;
+    width: 100%;
+    min-height: auto;
+}
+
+.musik-item {
+    width: 100%;
+    background-color: #252525;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.8rem;
+    line-height: 25px;
+    padding-bottom: 5px;
+}
+
+.musik-item img{
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.musik-item:hover, .artist-card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+.play-bar{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(20, 19, 19);
+    bottom: 0;
+}
+.control{
+    margin-left: 23%;
+}
+.control i{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.30rem;
+}
+.control i, .opti i:hover{
+    cursor: pointer;
+}
+
+.opti{
+    display: flex;
+    align-items: center;
+    gap: 1.35rem;
+    padding-left: 2rem;
+}
+.opti i{
+    font-size: 1.45rem;
+}
+
+input[type="range"] {
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Gaya untuk scrollbar */
+.main::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Gaya untuk bagian pegangan scrollbar (thumb) */
+.main::-webkit-scrollbar-thumb {
+    background-color: #888; /* Warna pegangan scrollbar */
+    border-radius: 8px; /* Bentuk pegangan scrollbar */
+}
+
+/* Gaya untuk bagian track scrollbar (track) */
+.main::-webkit-scrollbar-track {
+    border-radius: 12px;
+    background-color: #f1f1f1; /* Warna track scrollbar */
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <link rel="icon" href="./src/logo.png" type="image/x-icon" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="../script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="menu">
+          <img src="../src/logo.png" alt="" width="15%" style="border-radius: 50%" />
+          <h2 style="position: absolute; top: 1.3rem; left: 4.5rem; font-size: 1.5vw">Audiophonic</h2>
+  
+          <i class="bi bi-house-door-fill custom-icon home-icon"></i>
+          <i class="bi bi-search custom-icon search-icon"></i>
+          <a href="home-page.html">
+              <div class="button-home">Home</div>
+          </a>
+          <div class="button-search">Search</div>
+        </div>
+
+        <div class="playlist">
+          <h3>Your Playlist</h3>
+          <div id="myPlaylist">
+            <div>
+              <img src="../src/playlist.png" alt="">
+            </div>
+            <div>
+              <h4>Chill 😎</h4>
+              <p>Playlist  ●  Rizkyy</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- <script>
+          document.getElementById('myPlaylist').addEventListener('click', function() {
+            document.querySelectorAll('.artist-container').style.opacity = 0;
+            document.querySelectorAll('.playlist-item').style.opacity = 1;
+            document.querySelectorAll('.playlist-list').style.opacity = 1;
+          });
+        </script> -->
+        
+        <div class="main">
+            <div class="navbar">
+                <a href="" onclick="goBack()">
+                    <i class="bi bi-arrow-left-circle-fill custom-icon arrow-back"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-arrow-right-circle-fill custom-icon arrow-next"></i>
+                </a>
+            <div class="navbar-menu">
+                <input type="text" id="search-input">
+                <button onclick="performSearch()">Search</button>
+            </div>
+                <a href="">
+                    <h3 style="position: absolute; top: 3vh; left: 65vw"><a href="./pages/login.html">Rizkyyy</a></h3>
+                    <lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover" colors="primary:#ffffff" style="width: 40px; height: 40px; position: absolute; top: 2vh; left: 71vw"> </lord-icon>
+                </a>
+            </div>
+            <div id="artists-container" class="artists-container"></div>
+        </div>
+    </div>
+
+
+
+    <div class="play-bar">
+      <div style="height: 7vh; width: 7vh; margin-top: 2.5vh; margin-left: 2vw">
+        <img src="../src/spread thin.jpg" alt="" width="51" />
+      </div>
+      <div style="width: 20vw; height: 7vh; margin-top: 2.5vh; margin-left: 1.5vw">
+        <h3>spread Thin</h3>
+        <p style="font-size: 0.8rem; font-weight: 100">Mariah the scientist</p>
+      </div>
+      <div style="width: 40vw; height: 4.5vh; margin-top: 2vh; margin-left: 5vw">
+        <div class="control">
+          <i class="bi bi-shuffle"></i>
+          <i class="bi bi-skip-backward-fill"></i>
+          <i class="bi bi-pause-circle-fill" style="font-size: 1.7rem"></i>
+          <i class="bi bi-skip-forward-fill"></i>
+          <i class="bi bi-repeat"></i>
+        </div>
+
+        <div style="font-weight: 100; display: flex; padding-left: 1rem; margin-top: -1.25vh">
+          0:53
+          <div style="width: 70%; margin-left: 5%; margin-top: 1.7vh; height: 0.5vh; background-color: rgb(96, 94, 94); border-radius: 5px; margin-right: 1.5rem"></div>
+          <dir style="position: absolute; height: 0.5vh; width: 10%; background-color: rgb(206, 201, 201); border-radius: 5px; top: 8vh; left: 37vw"></dir>
+          3:54
+        </div>
+      </div>
+
+      <div class="opti" style="width: 20vw; height: 7vh; margin-top: 2.5vh; margin-left: 4.25vw">
+        <i class="bi bi-arrows-angle-expand"></i>
+        <i class="bi bi-mic-fill"></i>
+        <i class="bi bi-volume-up-fill"></i>
+        <div style="width: 30%; height: 0.5vh; background-color: rgb(96, 94, 94); border-radius: 5px; margin-right: 1.5rem"></div>
+        <dir style="position: absolute; height: 0.5vh; width: 2.8%; background-color: rgb(206, 201, 201); border-radius: 5px; top: 5.75vh; left: 86.2vw"></dir>
+      </div>
+    </div>
+
+    
+  </body>
+</html>

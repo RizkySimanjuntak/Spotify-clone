@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(16, 14, 14);
+            margin: 0; 
+            height: 100vh;
+        }
+        .page {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            width: 500px;
+            height: 650px;
+            background-color: rgb(33, 31, 31);
+            padding: 20px; 
+            box-sizing: border-box; 
+        }
+        input {
+            margin-top: 20px;
+            height: 30px;
+            width: 300px;
+        }
+        .quick-login{
+            display: flex;
+            margin-bottom: 10px;
+            border-radius: 50px;
+            width: 350px;
+            height: 50px;
+            border: 1px solid white;
+        }
+        .quick-login h3{
+            margin-left: 50px;
+            font-size: 15px;
+            font-weight: 100;
+        }
+        .quick-login:hover{
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        hr {
+            border: 0.5px solid rgba(255, 255, 255, 0.5);
+            width: 100%;
+        }
+        input{
+            height: 40px;
+            width: 350px;
+            padding-left: 10px;
+            border-radius: 10px;
+            color: white;
+            background-color: rgba(50, 49, 49, 0.696);
+        }
+        p{
+            margin: 0;
+        }
+        button{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: green;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1 style="font-weight: 400;">Sign up to Audiophonic</h1>
+        <p style="margin-left: -270px; margin-top: 20px; height: 10px; font-weight: 100;">Username</p>
+        <input type="text" name="" id="input" placeholder="username"> 
+        <p style="margin-left: -270px; margin-top: 20px; height: 10px; font-weight: 100;">Password</p>
+        <input type="password" name="" id="input" placeholder="password"> 
+        <button onclick="validation()">Next</button>
+        <p style="font-weight: 100;">or</p>
+        <hr style="margin: 0;">
+        <div class="quick-login" style="margin-top: 30px;">
+            <img src="/src/google-logo.png" alt="" width="50">
+            <h3>Continue with Google</h3>
+        </div>
+        <div class="quick-login">
+            <img src="/src/facebook-logo.png" alt="" width="35" height="35" style="margin-top: 5px; margin-left: 5px;">
+            <h3>Continue with Facebook</h3>
+        </div>
+        <div class="quick-login">
+            <img src="/src/apple-logo.png" alt="" width="45" height="45" style="margin-left: 4px;">
+            <h3>Continue with Apple</h3>
+        </div>
+    </div>
+    <script>
+        const validation = () => {
+            const input = document.getElementById('input');
+            if (input.value !== '') { 
+                // alert('Login Success')
+                window.location.href = 'home-page.html';
+            } else {
+                alert('Please enter a value');
+            }
+        }
+    </script>
+</body>
+</html>
