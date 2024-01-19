@@ -89,29 +89,55 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 40px 20px;
-    margin-bottom: 150px;
     gap: 2rem;
 }
-.artists-container .artist-card{
+
+.tracks-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-bottom: 100px;
+    gap: 2rem;
+}
+.artist-card{
     width: 12rem;
     background-color: #202020;
     border-radius: 20px;
     padding: 10px 5px;
     text-align: center;
 }
-.artists-container .artist-card img{
+.track-card{
+    width: 12rem;
+    background-color: #202020;
+    border-radius: 20px;
+    padding: 10px 5px;
+    text-align: center;
+}
+.artist-card img{
+    border-radius: 20px;
+    width: 10rem;
+    aspect-ratio: 1/1;
+}
+.track-card img{
     border-radius: 20px;
     width: 10rem;
     aspect-ratio: 1/1;
 }
 .artists-container h2{
-    font-weight: normal;
-    font-size: 0.9rem;
-    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+.tracks-container h2{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 5px 0;
 }
 .artists-container p{
-    color: #c1c1c1;
-    margin-top: 15px;
+    font-size: 0.7rem;
+}
+
+.tracks-container p{
     font-size: 0.7rem;
 }
 
@@ -139,7 +165,6 @@ body{
 }
 
 .content{
-    height: auto;
     padding: 2rem;
 }
 .playlist > div{
@@ -308,7 +333,7 @@ body{
     aspect-ratio: 1/1;
 }
 
-.musik-item:hover, .artist-card:hover{
+.musik-item:hover, .artist-card:hover, .track-card:hover{
     cursor: pointer;
     transform: scale(1.03);
     transition: transform 0.3s ease;
@@ -349,19 +374,30 @@ input[type="range"] {
     cursor: pointer;
 }
 
-/* Gaya untuk scrollbar */
+.context-menu {
+    position: absolute;
+    background-color: #434343;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.context-menu div {
+    padding: 8px;
+    cursor: pointer;
+}
+
 .main::-webkit-scrollbar {
     width: 12px;
 }
 
-/* Gaya untuk bagian pegangan scrollbar (thumb) */
 .main::-webkit-scrollbar-thumb {
-    background-color: #888; /* Warna pegangan scrollbar */
-    border-radius: 8px; /* Bentuk pegangan scrollbar */
+    background-color: #888; 
+    border-radius: 8px; 
 }
 
-/* Gaya untuk bagian track scrollbar (track) */
 .main::-webkit-scrollbar-track {
     border-radius: 12px;
-    background-color: #f1f1f1; /* Warna track scrollbar */
+    background-color: #f1f1f1; 
 }
